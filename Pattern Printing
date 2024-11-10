@@ -22,3 +22,140 @@ int main()
     }
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 2: if n=5
+        55555
+        4444*
+        333**
+        22***
+        1****
+Ans:
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++)
+    {
+      for(int j=n;j>=i;j--)
+      {
+        cout<<n-i+1;
+      }
+      
+      for(int space=1;space<i;space++)
+      cout<<"*";
+      cout<<endl;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+Ques 3: If, n=5
+
+ABCDEFGHI
+ ABCDEFG
+  ABCDE
+   ABC
+    A
+
+Ans: 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    
+    for(int i=n;i>=1;i--)
+    {
+      for(int space=n;space>i;space--)
+      cout<<" ";
+      char ch = 'A';
+      for(int j=1;j<=i*2-1;j++)
+      {
+        cout<<ch;
+        ch = ch+1;
+      }
+      
+      cout<<endl;
+      
+    }
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------
+Ques 4: If, n=4
+
+1
+12
+123
+1234
+123
+12
+1
+
+Ans:
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n*2-1;i++)
+    {
+      if(i<=n)
+      {
+        for(int j=1;j<=i;j++)
+        cout<<j;
+      }
+      else
+      {
+        for(int j=1;j<=n*2-i;j++)
+        {
+          cout<<j;
+        }
+      }
+      cout<<endl;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+Ques 5: If, n=5
+
+1   1
+ 2 2 
+  3  
+ 4 4 
+5   5
+
+Ans:
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n;j++)
+      {
+        if(i==j||j==n+1-i)
+        cout<<i;
+        else
+        cout<<" ";
+      }
+      cout<<endl;
+    }
+    
+    
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+
